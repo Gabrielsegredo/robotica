@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Acessível</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Site Acessível</h1>
+        <div class="controls">
+            <button onclick="increaseFontSize()">A+</button>
+            <button onclick="decreaseFontSize()">A-</button>
+            <select id="colorBlindness" onchange="changeColorScheme()">
+                <option value="normal">Normal</option>
+                <option value="protanopia">Protanopia</option>
+                <option value="deuteranopia">Deuteranopia</option>
+                <option value="tritanopia">Tritanopia</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <p>Bem-vindo ao nosso site acessível. Aqui você pode ajustar o tamanho da fonte e as cores para melhorar a leitura.</p>
+        <div class="images">
+            <img src="sustentavel.png" alt="Robotica sustentavel">
+            <img src="educacional.png" alt="Descrição da Imagem 2">
+            <img src="automação.png" alt="Descrição da Imagem 3">
+        </div>
+    </main>
+    <script src="scripit.js"></script>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <filter id="protanopia">
+            <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0 0.558, 0.442, 0, 0, 0 0, 0.242, 0.758, 0, 0 0, 0, 0, 1, 0"/>
+        </filter>
+        <filter id="deuteranopia">
+            <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0 0.7, 0.3, 0, 0, 0 0, 0.3, 0.7, 0, 0 0, 0, 0, 1, 0"/>
+        </filter>
+        <filter id="tritanopia">
+            <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0 0, 0.433, 0.567, 0, 0 0, 0.475, 0.525, 0, 0 0, 0, 0, 1, 0"/>
+        </filter>
+    </svg>
+    
+
+
+</body>
+</html>
